@@ -1,39 +1,41 @@
-import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-import handleSmoothScroll from '../utils/handleSmoothScroll'
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import handleSmoothScroll from "../utils/handleSmoothScroll";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    setIsOpen(false)
-  }, [location])
+    setIsOpen(false);
+  }, [location]);
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/portfolio', label: 'Portfolio' },
-    { path: '/contact', label: 'Contact' },
-    { path: '/resume', label: 'Resume' },
-  ]
+    { path: "/", label: "Home" },
+    { path: "/residential", label: "Residential" },
+    { path: "/commercial", label: "Commercial" },
+    { path: "/superintendent-services", label: "Superintendent Services" },
+    { path: "/contact", label: "Contact" },
+  ];
 
   return (
-    <motion.nav 
+    <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        scrolled
+          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -42,11 +44,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto container-padding">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group" onClick={() => handleSmoothScroll()}>
+          <Link
+            to="/"
+            className="flex items-center space-x-2 group"
+            onClick={() => handleSmoothScroll()}
+          >
             <div className="p-2 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg transform group-hover:scale-105 transition-transform duration-300">
-              <img src='/logo.svg' alt="Ethan Owens" className="w-6 h-6" />
+              <img src="/logo-small.png" alt="Trycon Enterprises" className="w-6 h-6" />
             </div>
-            <span className="font-bold text-xl gradient-text">Ethan Owens</span>
+            <div>
+              <span className="font-bold text-xl text-blue-600">
+                Trycon Enterprises
+              </span>
+              <p>Direction Determines Destination</p>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
@@ -57,8 +68,8 @@ const Navbar = () => {
                 to={item.path}
                 className={`relative font-medium transition-colors duration-300 ${
                   location.pathname === item.path
-                    ? 'text-primary-600 dark:text-primary-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                    ? "text-primary-600 dark:text-primary-400"
+                    : "text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
                 }`}
                 onClick={() => handleSmoothScroll()}
               >
@@ -89,7 +100,7 @@ const Navbar = () => {
             <motion.div
               className="md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-gray-200 dark:border-gray-700"
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
@@ -105,8 +116,8 @@ const Navbar = () => {
                       to={item.path}
                       className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-300 ${
                         location.pathname === item.path
-                          ? 'bg-primary-50 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                          ? "bg-primary-50 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400"
+                          : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
                       }`}
                       onClick={() => handleSmoothScroll()}
                     >
@@ -120,7 +131,7 @@ const Navbar = () => {
         </AnimatePresence>
       </div>
     </motion.nav>
-  )
-}
+  );
+};
 
-export default Navbar 
+export default Navbar;
