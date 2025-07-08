@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { useTransition, animated } from "@react-spring/web";
-import images from "../../data/home.json";
+
+const images = [
+  "home1.webp",
+  "home2.jpg",
+  "home3.webp"
+];
 
 function Transition() {
   const [index, setIndex] = useState(0);

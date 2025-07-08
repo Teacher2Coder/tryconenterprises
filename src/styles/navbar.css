@@ -1,0 +1,11 @@
+.slogan {
+  font-size: 0.875rem; /* Adjust the font size as needed */
+  margin-top: 0.25rem; /* Adjust spacing as needed */
+  transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+  .slogan {
+    display: none; /* Hide slogan on smaller screens */
+  }  
+}

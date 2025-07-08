@@ -43,6 +43,7 @@
 .img-first {
   width: 40%;
   border-radius: 8px;
+  border: 2px solid black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-left: 5%;
   margin-top: 5%;
@@ -51,6 +52,7 @@
 .img-second {
   width: 80%;
   border-radius: 8px;
+  border: 2px solid black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   margin-top: 8%;
@@ -128,7 +130,7 @@
 
 .services-at-a-glance-divider {
   width: 2px;
-  background: #e2e8f0;
+  background: black;
   margin: 0 2rem;
   align-self: stretch;
 }
@@ -139,6 +141,21 @@
     align-items: stretch;
     gap: 2rem;
     padding: 1.5rem 0.5rem;
+  }
+
+  .services-at-a-glance-title, .services-at-a-glance-subtitle {
+    text-align: center;
+  }
+
+  .services-at-a-glance-info, .services-at-a-glance-list {
+    flex: none;
+    min-width: 100%;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .services-at-a-glance-divider {

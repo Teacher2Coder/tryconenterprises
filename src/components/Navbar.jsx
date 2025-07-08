@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import handleSmoothScroll from "../utils/handleSmoothScroll";
 
+import "../styles/navbar.css"; // Import your custom styles
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -49,14 +51,24 @@ const Navbar = () => {
             className="flex items-center space-x-2 group"
             onClick={() => handleSmoothScroll()}
           >
-            <div className="p-2 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg transform group-hover:scale-105 transition-transform duration-300">
-              <img src="/logo-small.png" alt="Trycon Enterprises" className="w-6 h-6" />
+            <div 
+              className="p-2 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg transform group-hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src="/logo-small.png"
+                alt="Trycon Enterprises"
+                className="w-6 h-6"
+              />
             </div>
             <div>
               <span className="font-bold text-xl text-blue-600">
                 Trycon Enterprises
               </span>
-              <p>Direction Determines Destination</p>
+              <p 
+                className="slogan"
+              >
+                Direction Determines Destination
+              </p>
             </div>
           </Link>
 

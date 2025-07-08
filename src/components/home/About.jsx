@@ -3,14 +3,17 @@ import "../../styles/home.css";
 
 const About = ({ itemVariants }) => {
   return (
-    <section>
+    <section style={{ borderBottom: "5px solid black" }}>
       <motion.div
         variants={itemVariants}
-        className="text-center mb-16"
+        className="text-center pb-16"
         style={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
+          backgroundImage: "url('/topo.webp')",
+          backgroundSize: "cover",
+          filter: "brightness(1.3)",
         }}
       >
         <img src="/home/about1.jpg" className="img-first" />
@@ -22,7 +25,7 @@ const About = ({ itemVariants }) => {
           <h3 className="text-xl font-semibold mb-4">
             Choose our general contracting company serving the DFW area
           </h3>
-          <p style={{ marginBottom: "1rem" }}>
+          <p className="text-black" style={{ marginBottom: "1rem" }}>
             You have a unique vision for how you want your home or business to
             look and function, so it’s important to choose a general contractor
             that you can trust to execute your ideas. For everything from minor
@@ -30,9 +33,9 @@ const About = ({ itemVariants }) => {
             take pride in creating comfortable and appealing homes and
             commercial spaces in DFW and the surrounding areas.
           </p>
-          <span>
-            Call{" "}
-            <a className="text-blue-600" href="tel:1234567890">
+          <span className="text-black">
+            Call 
+            <a className="text-blue-600 ml-1" href="tel:1234567890">
               123-456-7890
             </a>{" "}
             now to schedule a consultation
