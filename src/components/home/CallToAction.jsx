@@ -3,57 +3,50 @@ import ContactUsButton from "../ContactUsButton";
 
 const CallToAction = ({ itemVariants }) => {
   return (
-    <section>
+    <section className="relative">
       <motion.div variants={itemVariants}>
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            display: "inline-block",
-          }}
-        >
-          <img
-            src="/home/home1.webp"
-            alt=""
-            style={{
-              width: "100%",
-              maxHeight: "100vh",
-              display: "block",
-              zIndex: 0,
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 1,
-              color: "#fff", // Adjust for contrast
-              textShadow: "0 2px 8px rgba(0,0,0,0.7)", // Optional for readability
-              pointerEvents: "none", // Allows clicks to pass through if needed
-            }}
-          >
-            <h3
-              style={{ pointerEvents: "auto" }}
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4"
+        <div className="relative w-full">
+          {/* Background Image */}
+          <div className="relative w-full h-screen sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden">
+            <img
+              src="/home/home1.webp"
+              alt="Construction renovation project"
+              className="w-full h-full object-cover"
+            />
+            {/* Overlay for better text contrast */}
+            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          </div>
+          
+          {/* Content Overlay */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center 
+                          px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="max-w-4xl mx-auto space-y-4 sm:space-y-6"
             >
-              Transform Your Property From Top to Bottom
-            </h3>
-            <h2
-              style={{ pointerEvents: "auto" }}
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-6"
-            >
-              Hire us for your residential or commercial renovation project
-            </h2>
-            <div style={{ pointerEvents: "auto" }}>
-              <ContactUsButton itemVariants={itemVariants} />
-            </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
+                             font-bold text-white leading-tight
+                             drop-shadow-lg">
+                Transform Your Property From Top to Bottom
+              </h3>
+              
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
+                             font-semibold text-white leading-tight
+                             drop-shadow-lg max-w-3xl mx-auto">
+                Hire us for your residential or commercial renovation project
+              </h2>
+              
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="pt-4 sm:pt-6"
+              >
+                <ContactUsButton itemVariants={itemVariants} />
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </motion.div>

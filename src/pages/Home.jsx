@@ -16,47 +16,84 @@ const Home = () => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.6,
-        staggerChildren: 0.2
+        duration: 0.8,
+        staggerChildren: 0.3,
+        ease: "easeOut"
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { 
+        duration: 0.7,
+        ease: "easeOut"
+      }
     }
   }
   
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="hidden"
-    >
-      {/* Hero section */}
-      <Hero itemVariants={itemVariants}/>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        className="w-full"
+      >
+        <motion.div variants={itemVariants}>
+          <Hero />
+        </motion.div>
 
-      {/* Services section */}
-      <Services itemVariants={itemVariants} />
+        <motion.div variants={itemVariants}>
+          <Services itemVariants={itemVariants} />
+        </motion.div>
 
-      {/* About section */}
-      <About itemVariants={itemVariants}/>
+        <div
+          style={{
+            backgroundImage: "url('/topo.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            width: "100%",
+          }}
+        >
+          <div className="bg-white/90">
+            <motion.div variants={itemVariants}>
+              <About itemVariants={itemVariants}/>
+            </motion.div>
+          </div>
+        </div>
 
-      {/* Call to action */}
-      <CallToAction itemVariants={itemVariants}/>
+        <motion.div variants={itemVariants}>
+          <CallToAction itemVariants={itemVariants}/>
+        </motion.div>
 
-      {/* Services at a glance */}
-      <ServicesAtAGlance itemVariants={itemVariants}/>
+        <div
+          style={{
+            backgroundImage: "url('/topo.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            width: "100%",
+          }}
+        >
+          <div className="bg-white/90">
+            <motion.div variants={itemVariants}>
+              <ServicesAtAGlance itemVariants={itemVariants}/>
+            </motion.div>
+          </div>
+        </div>
 
-      {/* What sets us apart? */}
-      <SetApart itemVariants={itemVariants}/>
+        <motion.div variants={itemVariants}>
+          <SetApart itemVariants={itemVariants}/>
+        </motion.div>
 
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

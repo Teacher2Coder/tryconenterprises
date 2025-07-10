@@ -1,11 +1,35 @@
 .slogan {
-  font-size: 0.875rem; /* Adjust the font size as needed */
-  margin-top: 0.25rem; /* Adjust spacing as needed */
+  font-size: 0.875rem;
+  margin-top: 0.125rem;
   transition: color 0.3s ease-in-out;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Enhanced responsiveness for the slogan */
+@media screen and (max-width: 1024px) {
+  .slogan {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 950px) {
   .slogan {
-    display: none; /* Hide slogan on smaller screens */
-  }  
+    display: none;
+  }
+}
+
+/* Additional navbar enhancements */
+.navbar-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Smooth transitions for mobile menu */
+.mobile-menu-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-menu-item:hover {
+  transform: translateX(4px);
 }

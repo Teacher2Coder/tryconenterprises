@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ContactUsButton from "../ContactUsButton";
 
 const Offerings = ({ itemVariants, pageData }) => {
   return (
@@ -72,6 +73,7 @@ const Offerings = ({ itemVariants, pageData }) => {
                 {pageData.callToAction2}
               </motion.p>
             )}
+            <ContactUsButton itemVariants={itemVariants}/>
           </motion.div>
         </div>
       </div>

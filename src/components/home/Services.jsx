@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
+import { ArrowRight } from "lucide-react";
 import handleSmoothScroll from "../../utils/handleSmoothScroll";
 import "../../styles/home.css";
 
@@ -50,16 +50,24 @@ const Services = ({ itemVariants }) => {
               </div>
 
               <div className="p-6">
-                <Link to={service.link} onClick={() => handleSmoothScroll()}>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 cursor-pointer">
-                    {service.title}
-                  </h3>
-                </Link>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 cursor-pointer">
+                  {service.title}
+                </h3>
 
                 <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                   {service.description}
                 </p>
               </div>
+              <motion.div variants={itemVariants} className="text-center m-4">
+                <Link
+                  to={service.link}
+                  className="btn-primary inline-flex items-center gap-2"
+                  onClick={() => handleSmoothScroll()}
+                >
+                  Learn more
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </motion.div>
             </motion.div>
           ))}
         </div>

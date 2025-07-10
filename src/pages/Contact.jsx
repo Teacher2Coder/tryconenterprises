@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Hero from '../components/services-shared/Hero'
 import ContactForm from '../components/contact/ContactForm'
 import SidePanel from '../components/contact/SidePanel'
 
@@ -9,18 +10,23 @@ const Contact = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        staggerChildren: 0.2
-      }
-    }
-  }
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
-    }
+      transition: { duration: 0.6 },
+    },
+  };
+
+  const pageData = {
+    title: "Contact Us",
+    description: "Ready to start your project? Get in touch with us today for a free consultation and personalized quote."
   }
 
   return (
@@ -29,28 +35,39 @@ const Contact = () => {
       initial="hidden"
       animate="visible"
       exit="hidden"
-      className="min-h-screen section-padding"
+      className="min-h-screen flex flex-col"
     >
-      <div className="max-w-7xl mx-auto container-padding">
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Contact Us</span>
-          </h1>
-        </motion.div>
+      <Hero itemVariants={itemVariants} pageData={pageData} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <motion.div variants={itemVariants}>
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
-              <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-                Send us a message!
-              </h2>
-              
-              <ContactForm />
+      <div
+        style={{
+          backgroundImage: "url('/topo.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          width: "100%",
+        }}
+      >
+        <div className="bg-white/80">
+          <motion.div
+            variants={itemVariants}
+            className="container mx-auto container-padding py-12 md:py-16"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div variants={itemVariants}>
+                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                  <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                    Send us a message!
+                  </h2>
+                  
+                  <ContactForm />
 
+                </div>
+              </motion.div>
+
+              <SidePanel itemVariants={itemVariants} />
             </div>
           </motion.div>
-
-          <SidePanel itemVariants={itemVariants} />
         </div>
       </div>
     </motion.div>

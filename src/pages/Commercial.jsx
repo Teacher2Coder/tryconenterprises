@@ -29,7 +29,7 @@ const Commercial = () => {
     description: "Transform your business into a space that fits your needs with our comprehensive commercial construction services.",
     subTitle: "From commercial buildouts to apartment remodeling, we do it all",
     subTitle2: "Tell us about your project in Burleson, Alvarado, TX or nationwide",
-    subDescription: "Whether you’re interested in remodeling a retail space or building a house from the ground up, TRYCON ENTERPRISES will bring your needs to life. Our unique skill set comes from 20+ years of big-box retail project management and 30+ years of construction management experience. Contact us today for help with your project in Burleson, Alvarado, TX or a surrounding area.",
+    subDescription: "Whether you’re interested in remodeling a retail space or building a house from the ground up, TRYCON ENTERPRISES will bring your needs to life. Our unique skill set comes from 20+ years of big-box retail project management and 30+ years of construction management experience. Contact us today for help with your project in the DFW area or nationwide.",
     subDescription2: "",
     offeringTitle: "Offering services for any type of business",
     offeringImage: "/services/business.webp",
