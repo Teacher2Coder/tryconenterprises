@@ -1,7 +1,7 @@
-import { PhoneOutgoing, Mail, Send } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import handleSmoothScroll from '../utils/handleSmoothScroll'
-import '../styles/footer.css'
+import { PhoneOutgoing, Mail, Send } from "lucide-react";
+import { Link } from "react-router-dom";
+import handleSmoothScroll from "../utils/handleSmoothScroll";
+import "../styles/footer.css";
 
 const Footer = () => {
   return (
@@ -23,20 +23,20 @@ const Footer = () => {
             </h4>
             <div className="space-y-2">
               <Link
-                to="/residential" 
-                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300" 
+                to="/residential"
+                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                 onClick={() => handleSmoothScroll()}
               >
                 Residential
               </Link>
               <Link
-                to="/commercial" 
-                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300" 
+                to="/commercial"
+                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                 onClick={() => handleSmoothScroll()}
               >
                 Commercial
               </Link>
-              <Link 
+              <Link
                 to="/superintendent-services"
                 className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                 onClick={() => handleSmoothScroll()}
@@ -91,20 +91,21 @@ const Footer = () => {
                   <Send className="w-5 h-5 text-white" />
                 </Link>
               </div>
-            </div>   
+            </div>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-accent-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Trycon Enterprises. All rights reserved.
+              © {new Date().getFullYear()} Trycon Enterprises. All rights
+              reserved.
             </p>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

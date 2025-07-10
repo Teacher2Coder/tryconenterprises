@@ -51,9 +51,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 group"
             onClick={() => handleSmoothScroll()}
           >
-            <div 
-              className="p-2 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg transform group-hover:scale-105 transition-transform duration-300"
-            >
+            <div className="p-2 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg transform group-hover:scale-105 transition-transform duration-300">
               <img
                 src="/logo-small.png"
                 alt="Trycon Enterprises"
@@ -64,11 +62,7 @@ const Navbar = () => {
               <span className="font-bold text-xl text-blue-600">
                 Trycon Enterprises
               </span>
-              <p 
-                className="slogan"
-              >
-                Direction Determines Destination
-              </p>
+              <p className="slogan">Direction Determines Destination</p>
             </div>
           </Link>
 

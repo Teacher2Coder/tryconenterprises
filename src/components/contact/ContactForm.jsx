@@ -1,7 +1,6 @@
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import axios from "axios";
 import handleSendEmail from "../../utils/handleSendEmail";
 
 const ContactForm = () => {
@@ -26,7 +25,13 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
       setSubmitStatus("error");
       setIsSubmitting(false);
       return;
@@ -35,7 +40,13 @@ const ContactForm = () => {
     try {
       handleSendEmail(formData);
       setSubmitStatus("success");
-      setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     } catch (error) {
       setSubmitStatus("error");
       console.error(error);
@@ -165,7 +176,7 @@ const ContactForm = () => {
           animate={{ opacity: 1, y: 0 }}
           className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg text-green-700 dark:text-green-300"
         >
-          Thanks for your message! I'll get back to you soon.
+          Thanks for your message! We'll get back to you soon.
         </motion.div>
       )}
 

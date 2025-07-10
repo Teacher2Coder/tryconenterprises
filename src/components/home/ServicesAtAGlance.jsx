@@ -16,7 +16,9 @@ const ServicesAtAGlance = ({ itemVariants }) => {
         className="services-at-a-glance-container"
       >
         <div className="services-at-a-glance-info md:text-center">
-          <h1 className="services-at-a-glance-title text-black">Services at a glance</h1>
+          <h1 className="services-at-a-glance-title text-black">
+            Services at a glance
+          </h1>
           <h2 className="services-at-a-glance-subtitle text-black">
             We have the knowledge and expertise needed to handle a wide range of
             projects from residential to commercial.

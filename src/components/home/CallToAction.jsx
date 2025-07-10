@@ -39,20 +39,20 @@ const CallToAction = ({ itemVariants }) => {
               pointerEvents: "none", // Allows clicks to pass through if needed
             }}
           >
-            <h3 
+            <h3
               style={{ pointerEvents: "auto" }}
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4"
             >
               Transform Your Property From Top to Bottom
             </h3>
-            <h2 
+            <h2
               style={{ pointerEvents: "auto" }}
               className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-6"
             >
               Hire us for your residential or commercial renovation project
             </h2>
             <div style={{ pointerEvents: "auto" }}>
-              <ContactUsButton itemVariants={itemVariants}/>
+              <ContactUsButton itemVariants={itemVariants} />
             </div>
           </div>
         </div>

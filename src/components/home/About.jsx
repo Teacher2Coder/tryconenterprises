@@ -34,7 +34,7 @@ const About = ({ itemVariants }) => {
             commercial spaces in DFW and the surrounding areas.
           </p>
           <span className="text-black">
-            Call 
+            Call
             <a className="text-blue-600 ml-1" href="tel:1234567890">
               123-456-7890
             </a>{" "}

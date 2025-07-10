@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import ContactForm from '../components/contact/ContactForm'
+import SidePanel from '../components/contact/SidePanel'
 
 const Contact = () => {
   const containerVariants = {
@@ -41,7 +42,7 @@ const Contact = () => {
           <motion.div variants={itemVariants}>
             <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
               <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-                Send Me a Message
+                Send us a message!
               </h2>
               
               <ContactForm />
@@ -49,33 +50,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="space-y-8">
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
-              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-                Let's Connect
-              </h3>
-              
-              
-              
-              <p className="text-gray-600 dark:text-gray-400 mt-6">
-                Follow me for updates on my latest projects and tech insights.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-r from-primary-600 to-accent-600 p-8 rounded-2xl text-white">
-              <h3 className="text-xl font-bold mb-4">
-                Available for Projects
-              </h3>
-              <p className="mb-4 opacity-90">
-                I'm currently available for freelance projects and full-time opportunities. 
-                Let's discuss how we can work together!
-              </p>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-sm">Available for work</span>
-              </div>
-            </div>
-          </motion.div>
+          <SidePanel itemVariants={itemVariants} />
         </div>
       </div>
     </motion.div>

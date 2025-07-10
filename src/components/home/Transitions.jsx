@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTransition, animated } from "@react-spring/web";
 
-const images = [
-  "home1.webp",
-  "home2.jpg",
-  "home3.webp"
-];
+const images = ["home1.webp", "home2.jpg", "home3.webp"];
 
 function Transition() {
   const [index, setIndex] = useState(0);
@@ -27,7 +23,16 @@ function Transition() {
   });
 
   return (
-    <div style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, zIndex: 0 }}>
+    <div
+      style={{
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        top: 0,
+        left: 0,
+        zIndex: 0,
+      }}
+    >
       {transitions((style, item) => (
         <animated.img
           key={item}
