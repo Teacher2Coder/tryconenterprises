@@ -5,7 +5,7 @@ const SidePanel = ({ itemVariants }) => {
     <motion.div variants={itemVariants} className="space-y-8">
       <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
         <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-          Trycon Enterprises
+          TRYCON ENTERPRISES
         </h3>
         <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
           Located

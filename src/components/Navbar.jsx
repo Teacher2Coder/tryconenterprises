@@ -16,6 +16,19 @@ const Navbar = () => {
   }, [location]);
 
   useEffect(() => {
+    const scrollToTop = () => {
+      if (window.innerWidth <= 768) {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      } else {
+        handleSmoothScroll();
+      }
+    };
+    setTimeout(scrollToTop, 50);
+  }, [location]);
+
+  useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
       setScrolled(isScrolled);
@@ -37,8 +50,8 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-blue-600 backdrop-blur-lg border-b border-blue-500/30 shadow-xl" 
-          : "bg-blue-600/95 backdrop-blur-md border-b border-blue-500/20 shadow-lg"
+          ? "bg-blue-600 backdrop-blur-lg border-b border-blue-500/30 shadow-md md:shadow-xl" 
+          : "bg-blue-600/95 backdrop-blur-md border-b border-blue-500/20 shadow-sm md:shadow-lg"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -50,7 +63,6 @@ const Navbar = () => {
           <Link
             to="/"
             className="flex items-center space-x-3 group"
-            onClick={() => handleSmoothScroll()}
           >
             <div className="p-2 bg-white/20 backdrop-blur-sm rounded-lg transform group-hover:scale-105 transition-all duration-300 group-hover:bg-white/30">
               <img
@@ -61,7 +73,7 @@ const Navbar = () => {
             </div>
             <div>
               <span className="font-bold text-lg sm:text-xl text-white">
-                Trycon Enterprises
+                TRYCON ENTERPRISES
               </span>
               <p className="slogan text-blue-100 text-sm">Direction Determines Destination</p>
             </div>
@@ -78,7 +90,6 @@ const Navbar = () => {
                     ? "text-white bg-white/20 backdrop-blur-sm"
                     : "text-blue-100 hover:text-white hover:bg-white/10"
                 }`}
-                onClick={() => handleSmoothScroll()}
               >
                 {item.label}
                 {location.pathname === item.path && (
@@ -126,7 +137,6 @@ const Navbar = () => {
                           ? "bg-white/20 text-white backdrop-blur-sm"
                           : "text-blue-100 hover:text-white hover:bg-white/10"
                       }`}
-                      onClick={() => handleSmoothScroll()}
                     >
                       {item.label}
                     </Link>

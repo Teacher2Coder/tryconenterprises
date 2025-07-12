@@ -34,7 +34,7 @@ const Residential = () => {
     offeringTitle: "If you want it, we can deliver it.",
     offeringImage: "/services/sink.webp",
     imageAlt: "Sink",
-    offeringDescription: "Let us help you refresh or improve ypur favorite spaces. We offer:",
+    offeringDescription: "Let us help you refresh or improve your favorite spaces. We offer:",
     offerings: [
       "Home Additions",
       "Kitchen Remodeling",

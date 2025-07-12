@@ -19,6 +19,16 @@
   }
 }
 
+@media screen and (max-width: 425px) {
+  .slogan {
+    display: block;
+  }
+
+  nav {
+    padding-bottom: 1.25rem;
+  }
+}
+
 /* Additional navbar enhancements */
 .navbar-blur {
   backdrop-filter: blur(12px);

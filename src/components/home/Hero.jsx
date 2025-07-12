@@ -13,7 +13,7 @@ const Hero = () => {
       >
         <img
           src="logo.webp"
-          alt="Trycon Enterprises"
+          alt="TRYCON ENTERPRISES"
           className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 
                      h-auto drop-shadow-2xl pointer-events-none
                      transform transition-transform duration-300 hover:scale-105"

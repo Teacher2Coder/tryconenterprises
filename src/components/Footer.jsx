@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold gradient-text mb-4">
-              Trycon Enterprises
+              TRYCON ENTERPRISES
             </h3>
             <p className="text-gray-600 dark:text-gray-400 max-w-md">
               Alvarado, TX
@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-accent-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Trycon Enterprises. All rights
+              © {new Date().getFullYear()} TRYCON ENTERPRISES. All rights
               reserved.
             </p>
           </div>
