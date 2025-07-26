@@ -12,7 +12,7 @@ const Hero = ({ itemVariants, pageData }) => {
       <div className="container mx-auto container-padding text-center">
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 source-serif-4-bold"
           style={{
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
           }}
@@ -21,7 +21,7 @@ const Hero = ({ itemVariants, pageData }) => {
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto"
+          className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto source-serif-4"
           style={{
             textShadow: "1px 1px 2px rgba(0, 0, 0, 0.3)",
           }}

@@ -33,7 +33,7 @@ const Services = ({ itemVariants }) => {
     <section className="section-padding bg-white dark:bg-[#000000]">
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 source-serif-4-bold">
             Featured <span className="gradient-text">Services</span>
           </h2>
         </motion.div>
@@ -50,18 +50,18 @@ const Services = ({ itemVariants }) => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 cursor-pointer">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 cursor-pointer source-serif-4-bold">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 source-serif-4">
                   {service.description}
                 </p>
               </div>
               <motion.div variants={itemVariants} className="text-center m-4">
                 <Link
                   to={service.link}
-                  className="btn-primary inline-flex items-center gap-2"
+                  className="btn-primary inline-flex items-center gap-2 source-serif-4"
                   onClick={() => handleSmoothScroll()}
                 >
                   Learn more

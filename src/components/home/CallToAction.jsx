@@ -28,13 +28,13 @@ const CallToAction = ({ itemVariants }) => {
             >
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
                              font-bold text-white leading-tight
-                             drop-shadow-lg">
+                             drop-shadow-lg source-serif-4-bold">
                 Transform Your Property From Top to Bottom
               </h3>
               
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
                              font-semibold text-white leading-tight
-                             drop-shadow-lg max-w-3xl mx-auto">
+                             drop-shadow-lg max-w-3xl mx-auto source-serif-4-bold">
                 Hire us for your residential or commercial renovation project
               </h2>
               

@@ -20,10 +20,10 @@ const ServicesAtAGlance = ({ itemVariants }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 lg:mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 lg:mb-6 source-serif-4-bold">
                 Services at a glance
               </h1>
-              <h2 className="text-lg sm:text-xl lg:text-2xl text-black leading-relaxed">
+              <h2 className="text-lg sm:text-xl lg:text-2xl text-black leading-relaxed source-serif-4">
                 We have the knowledge and expertise needed to handle a wide range of
                 projects from residential to commercial.
               </h2>
@@ -40,7 +40,7 @@ const ServicesAtAGlance = ({ itemVariants }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <h4 className="text-xl sm:text-2xl font-semibold text-black mb-6 lg:mb-8">
+              <h4 className="text-xl sm:text-2xl font-semibold text-black mb-6 lg:mb-8 source-serif-4-bold">
                 You can count on us for...
               </h4>
               <ul className="space-y-3 sm:space-y-4">
@@ -51,7 +51,7 @@ const ServicesAtAGlance = ({ itemVariants }) => {
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
                   <Check className="text-green-600 mt-1 flex-shrink-0" size={20} />
-                  <span>Residential new construction services</span>
+                  <span className="source-serif-4">Residential new construction services</span>
                 </motion.li>
                 <motion.li 
                   className="flex items-start gap-3 text-black text-base sm:text-lg"
@@ -60,7 +60,7 @@ const ServicesAtAGlance = ({ itemVariants }) => {
                   transition={{ duration: 0.6, delay: 0.7 }}
                 >
                   <Check className="text-green-600 mt-1 flex-shrink-0" size={20} />
-                  <span>Residential remodeling services</span>
+                  <span className="source-serif-4">Residential remodeling services</span>
                 </motion.li>
                 <motion.li 
                   className="flex items-start gap-3 text-black text-base sm:text-lg"
@@ -69,7 +69,7 @@ const ServicesAtAGlance = ({ itemVariants }) => {
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
                   <Check className="text-green-600 mt-1 flex-shrink-0" size={20} />
-                  <span>Commercial renovation services</span>
+                  <span className="source-serif-4">Commercial renovation services</span>
                 </motion.li>
                 <motion.li 
                   className="flex items-start gap-3 text-black text-base sm:text-lg"
@@ -78,7 +78,7 @@ const ServicesAtAGlance = ({ itemVariants }) => {
                   transition={{ duration: 0.6, delay: 0.9 }}
                 >
                   <Check className="text-green-600 mt-1 flex-shrink-0" size={20} />
-                  <span>Commercial new construction services</span>
+                  <span className="source-serif-4">Commercial new construction services</span>
                 </motion.li>
                 <motion.li 
                   className="flex items-start gap-3 text-black text-base sm:text-lg"
@@ -87,7 +87,7 @@ const ServicesAtAGlance = ({ itemVariants }) => {
                   transition={{ duration: 0.6, delay: 1.0 }}
                 >
                   <Check className="text-green-600 mt-1 flex-shrink-0" size={20} />
-                  <span>Project Superintendent services</span>
+                  <span className="source-serif-4">Project Superintendent services</span>
                 </motion.li>
               </ul>
             </motion.div>

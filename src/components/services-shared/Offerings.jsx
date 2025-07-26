@@ -28,14 +28,14 @@ const Offerings = ({ itemVariants, pageData }) => {
           >
             <motion.h2
               variants={itemVariants}
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-600 mb-4"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-600 mb-4 source-serif-4-bold"
             >
               {pageData.offeringTitle}
             </motion.h2>
             
             <motion.p 
               variants={itemVariants}
-              className="text-base sm:text-lg leading-relaxed text-white mb-6"
+              className="text-base sm:text-lg leading-relaxed text-white mb-6 source-serif-4"
             >
               {pageData.offeringDescription}
             </motion.p>
@@ -48,7 +48,7 @@ const Offerings = ({ itemVariants, pageData }) => {
                 <motion.li 
                   key={index} 
                   variants={itemVariants}
-                  className="flex items-start space-x-3"
+                  className="flex items-start space-x-3 source-serif-4"
                 >
                   <span className="flex-shrink-0 w-2 h-2 bg-primary-600 rounded-full mt-2"></span>
                   <span className="text-white leading-relaxed">{offering}</span>
@@ -59,7 +59,7 @@ const Offerings = ({ itemVariants, pageData }) => {
             {pageData.callToAction && (
               <motion.p 
                 variants={itemVariants}
-                className="text-base sm:text-lg leading-relaxed text-white font-medium mt-6"
+                className="text-base sm:text-lg leading-relaxed text-white font-medium mt-6 source-serif-4"
               >
                 {pageData.callToAction}
               </motion.p>
@@ -68,7 +68,7 @@ const Offerings = ({ itemVariants, pageData }) => {
             {pageData.callToAction2 && (
               <motion.p 
                 variants={itemVariants}
-                className="text-base sm:text-lg leading-relaxed text-primary-600 font-semibold"
+                className="text-base sm:text-lg leading-relaxed text-primary-600 font-semibold source-serif-4"
               >
                 {pageData.callToAction2}
               </motion.p>

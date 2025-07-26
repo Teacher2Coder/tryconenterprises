@@ -25,15 +25,15 @@ const About = ({ itemVariants }) => {
                   className="space-y-4"
                 >
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 
-                                 leading-tight">
+                                 leading-tight source-serif-4-bold">
                     Invest in Detailed Construction Work
                   </h2>
                   
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-black">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-black source-serif-4-bold">
                     Choose our general contracting company serving the DFW area
                   </h3>
                   
-                  <p className="text-base sm:text-lg text-black leading-relaxed">
+                  <p className="text-base sm:text-lg text-black leading-relaxed source-serif-4">
                     You have a unique vision for how you want your home or business to
                     look and function, so it's important to choose a general contractor
                     that you can trust to execute your ideas. For everything from minor
@@ -43,7 +43,7 @@ const About = ({ itemVariants }) => {
                   </p>
                   
                   <div className="pt-2">
-                    <span className="text-base sm:text-lg text-black">
+                    <span className="text-base sm:text-lg text-black source-serif-4">
                       Call
                       <a 
                         className="text-blue-600 ml-1 hover:text-blue-800 transition-colors 

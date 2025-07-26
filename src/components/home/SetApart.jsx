@@ -11,7 +11,7 @@ const SetApart = ({ itemVariants }) => {
         >
           <div className="text-center mb-8 sm:mb-12">
             <motion.h2 
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 source-serif-4-bold"
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -19,7 +19,7 @@ const SetApart = ({ itemVariants }) => {
               What sets us apart?
             </motion.h2>
             <motion.p 
-              className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-3xl mx-auto"
+              className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-3xl mx-auto source-serif-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -42,7 +42,7 @@ const SetApart = ({ itemVariants }) => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-3 sm:gap-4 text-white p-3 sm:p-4 rounded-lg 
+                className="flex items-start gap-3 sm:gap-4 text-white p-3 sm:p-4 rounded-lg source-serif-4
                            bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}

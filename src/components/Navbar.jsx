@@ -72,10 +72,10 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <span className="font-bold text-lg sm:text-xl text-white">
+              <span className="source-serif-4 text-lg sm:text-xl text-white">
                 TRYCON ENTERPRISES
               </span>
-              <p className="slogan text-blue-100 text-sm">Direction Determines Destination</p>
+              <p className="slogan text-blue-100 text-sm source-serif-4">Direction Determines Destination</p>
             </div>
           </Link>
 
@@ -85,7 +85,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative px-3 py-2 rounded-lg font-medium transition-all duration-300 ${
+                className={`relative px-3 py-2 rounded-lg source-serif-4 transition-all duration-300 ${
                   location.pathname === item.path
                     ? "text-white bg-white/20 backdrop-blur-sm"
                     : "text-blue-100 hover:text-white hover:bg-white/10"
@@ -105,7 +105,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg text-white hover:bg-white/20 transition-colors duration-300"
+            className="md:hidden p-2 rounded-lg source-serif-4 text-white hover:bg-white/20 transition-colors duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -132,7 +132,7 @@ const Navbar = () => {
                   >
                     <Link
                       to={item.path}
-                      className={`block py-3 px-4 rounded-lg font-medium transition-all duration-300 mobile-menu-item ${
+                      className={`block py-3 px-4 rounded-lg font-medium transition-all duration-300 mobile-menu-item source-serif-4 ${
                         location.pathname === item.path
                           ? "bg-white/20 text-white backdrop-blur-sm"
                           : "text-blue-100 hover:text-white hover:bg-white/10"
